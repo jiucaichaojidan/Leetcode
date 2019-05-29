@@ -1,0 +1,15 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        my_str = []
+        my_dic = {'}':'{', ']':'[', ')':'('}
+
+        for i in s:
+            if i in my_dic:
+                if len(my_str) == 0:
+                    return False
+                elif my_str.pop() != my_dic[i]:
+                    return False
+            else:
+                my_str.append(i)
+        
+        return len(my_str) == 0
