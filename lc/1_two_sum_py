@@ -1,7 +1,0 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        my_dic = {}
-        for i in range(len(nums)):
-            if target - nums[i] in my_dic:
-                return [my_dic[target - nums[i]], i]
-            my_dic[nums[i]] = i
